@@ -1,0 +1,31 @@
+{
+  "name": "car-book-iocl",
+  "version": "1.0.0",
+  "description": "car booking with in a organization",
+  "main": "index.js",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "oracledb": "^6.0.2",
+    "pg": "^8.11.1",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.32.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TeamYayin/miniature-fortnight.git"
+  },
+  "keywords": [
+    "car-booking"
+  ],
+  "author": "py563",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TeamYayin/miniature-fortnight/issues"
+  },
+  "homepage": "https://github.com/TeamYayin/miniature-fortnight#readme"
+}
