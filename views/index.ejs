@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="csrfToken" content="<%= csrfToken %>" />
+    <title>IOCL</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div class="grid grid-cols-6">
+      <div class="col-start-3 col-span-2 mb-2 mt-12">
+        <%- include('header') %>
+        <p class="py-2"> Welcome to the Complaint Management System </p>
+        <p class="py-2"> Employees at IOCL, Please </p> <a href="/signup" class="text-green-600">Click Here</a></p>
+        <p class="py-2"> If you are Vendor, and New to this portal? <a href="/signup" class="text-green-600">Sign-up</a></p>
+        <p class="py-2"> Already have an Vendor account? <a href="/login" class="text-green-600">Login</a></p>
+      </div>
+      <div class="col-start-3 col-span-2"><%- include('footer') %></div>
+    </div>
+  </body>
+</html>

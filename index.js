@@ -1,5 +1,5 @@
-const hello = () => {
-  console.log("Hello Car Booking Site!");
-};
+const app = require("./app");
 
-hello();
+app.listen(30000, () => {
+  console.log("Started express server at port 30000");
+});
