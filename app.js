@@ -93,7 +93,7 @@ app.get("/", async (request, response) => {
 });
 
 app.get("/vendor-signup", async function (request, response) {
-  response.render("signup", {
+  response.render("vendorSignup", {
     csrfToken: request.csrfToken(),
     title: "Sign-up",
   });
@@ -124,7 +124,7 @@ app.post("/vendors", async function (request, response) {
 });
 
 app.get("/vendor-login", (request, response) => {
-  response.render("login", {
+  response.render("vendorLogin", {
     csrfToken: request.csrfToken(),
     title: "Login",
   });
