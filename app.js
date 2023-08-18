@@ -150,4 +150,31 @@ app.get("/signout", (request, response, next) => {
   });
 });
 
+//todo routes
+app.get("/vendor-home", (request, response) => {
+  response.render("vendorHome", {
+    csrfToken: request.csrfToken(),
+    title: "Login",
+    headingTitle: "Vendor Home",
+    vendorCompanyName: "Peter",
+    vendorCompanyCode: "123456",
+  });
+});
+//todo emp home page, vendor home page and hr role home page
+app.get("/emp-home", (request, response) => {
+  response.render("empHome", {
+    csrfToken: request.csrfToken(),
+    title: "Login",
+    headingTitle: "Employee Home",
+    userFirstName: "Peter",
+  });
+});
+app.get("/hr-home", (request, response) => {
+  response.render("hrHome", {
+    csrfToken: request.csrfToken(),
+    title: "Login",
+    headingTitle: "HR Home",
+    userFirstName: "Rajesh",
+  });
+});
 module.exports = app;
