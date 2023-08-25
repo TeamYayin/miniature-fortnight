@@ -160,15 +160,26 @@ app.get("/vendor-home", (request, response) => {
     vendorCompanyCode: "123456",
   });
 });
+
 //todo emp home page, vendor home page and hr role home page
 app.get("/emp-home", (request, response) => {
   response.render("empHome", {
     csrfToken: request.csrfToken(),
-    title: "Login",
-    headingTitle: "Employee Home",
+    title: "IOCL CMS Employee Home",
+    headingTitle: "Welcome to the Internal Complaint Management System",
     userFirstName: "Peter",
   });
 });
+
+app.get("/raise-complaint", (request, response) => {
+  response.render("registerComplaint", {
+    csrfToken: request.csrfToken(),
+    title: "Register Complaint",
+    headingTitle: "Register Complaint",
+    userFirstName: "Peter",
+  });
+});
+
 app.get("/hr-home", (request, response) => {
   response.render("hrHome", {
     csrfToken: request.csrfToken(),

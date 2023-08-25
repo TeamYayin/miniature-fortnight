@@ -1,41 +1,61 @@
-<div>
-  <div class="flex">
-    <h5><%=headingTitle %></h5>
-    <span id="count-overdue" class="ml-2 text-sm px-2 py-1 bg-gray-200"
-      ><%=userFirstName %></span
-    >
-  </div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="csrfToken" content="<%= csrfToken %>" />
+    <title><%=title %></title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <%- include('partials/header') %>
+    <section id="footer-sec" class="py-1 bg-blueGray-50 col-start-3 col-span-2">
+      <div class="w-full lg:w-8/12 px-4 mx-auto mt-6">
+        <div
+          class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-100 border-0"
+        >
+          <div class="flex">
+            <h5><%=headingTitle %></h5>
+          </div>
 
-  <ul class="list-none">
-    <li class="Todo-Item">
-      <div
-        class="flex items-center w-fit my-2 px-2 py-1 rounded hover:bg-aqua-50"
-      >
-        <p class="ml-2 text-sm text-gray-600">Raise a Complaint</p>
+          <ul class="list-none">
+            <li class="Todo-Item">
+              <div
+                class="flex items-center w-fit my-2 px-2 py-1 rounded hover:bg-aqua-50"
+              >
+                <p class="ml-2 text-sm text-gray-600">
+                  <a href="/raise-complaint"> Raise a Complaint </a>
+                </p>
+              </div>
+            </li>
+            <li class="Todo-Item">
+              <div
+                class="flex items-center w-fit my-2 px-2 py-1 rounded hover:bg-aqua-50"
+              >
+                <p class="ml-2 text-sm text-gray-600">Status</p>
+              </div>
+            </li>
+            <li class="Todo-Item">
+              <div
+                class="flex items-center w-fit my-2 px-2 py-1 rounded hover:bg-aqua-50"
+              >
+                <p class="ml-2 text-sm text-gray-600">
+                  Accept or Reject the Vendor Response
+                </p>
+              </div>
+            </li>
+            <li class="Todo-Item">
+              <div
+                class="flex items-center w-fit my-2 px-2 py-1 rounded hover:bg-aqua-50"
+              >
+                <p class="ml-2 text-sm text-gray-600">Reopen</p>
+              </div>
+            </li>
+          </ul>
+          <%- include('partials/footer') %>
+        </div>
       </div>
-    </li>
-    <li class="Todo-Item">
-      <div
-        class="flex items-center w-fit my-2 px-2 py-1 rounded hover:bg-aqua-50"
-      >
-        <p class="ml-2 text-sm text-gray-600">Status</p>
-      </div>
-    </li>
-    <li class="Todo-Item">
-      <div
-        class="flex items-center w-fit my-2 px-2 py-1 rounded hover:bg-aqua-50"
-      >
-        <p class="ml-2 text-sm text-gray-600">
-          Accept or Reject the Vendor Response
-        </p>
-      </div>
-    </li>
-    <li class="Todo-Item">
-      <div
-        class="flex items-center w-fit my-2 px-2 py-1 rounded hover:bg-aqua-50"
-      >
-        <p class="ml-2 text-sm text-gray-600">Reopen</p>
-      </div>
-    </li>
-  </ul>
-</div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="csrfToken" content="<%= csrfToken %>" />
+    <title><%=headingTitle %></title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <%- include('partials/header') %>
+    <section class="py-1 bg-blueGray-50">
+      <div class="w-full lg:w-8/12 px-4 mx-auto mt-6">
+        <div
+          class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-100 border-0"
+        >
+          <div class="rounded-t bg-white mb-0 px-6 py-6">
+            <div class="text-center flex justify-between">
+              <h6 class="text-blueGray-700 text-xl font-bold">
+                Register a New Complaint
+              </h6>
+            </div>
+          </div>
+          <div class="flex-auto px-4 lg:px-10 py-10 pt-0">
+            <form>
+              <h6
+                class="text-blueGray-400 text-sm mt-3 mb-6 font-bold uppercase"
+              >
+                Personal Information
+              </h6>
+              <div class="flex flex-wrap">
+                <div class="w-full lg:w-6/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label
+                      class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                      htmlfor="grid-password"
+                    >
+                      First Name
+                    </label>
+                    <input
+                      type="text"
+                      class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded rounded-md text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                      value="Lucky"
+                    />
+                  </div>
+                </div>
+                <div class="w-full lg:w-6/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label
+                      class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                      htmlfor="grid-password"
+                    >
+                      Last Name
+                    </label>
+                    <input
+                      type="text"
+                      class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded rounded-md shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                      value="Jesse"
+                    />
+                  </div>
+                </div>
+                <div class="w-full lg:w-12/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label
+                      class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                      htmlfor="grid-password"
+                    >
+                      Email address
+                    </label>
+                    <input
+                      type="email"
+                      class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded rounded-md text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                      value="jesse@example.com"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <hr class="mt-6 border-b-1 border-blueGray-300" />
+
+              <h6
+                class="text-blueGray-400 text-sm mt-3 mb-6 font-bold uppercase"
+              >
+                Complaint Information
+              </h6>
+              <div class="flex flex-wrap">
+                <div class="w-full lg:w-12/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label
+                      class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                      htmlfor="grid-password"
+                    >
+                      Complaint Title
+                    </label>
+                    <input
+                      type="text"
+                      class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded rounded-md bg-white text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                      value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09"
+                    />
+                  </div>
+                </div>
+                <div class="w-full lg:w-12/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label
+                      class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                      htmlfor="grid-password"
+                    >
+                      Complaint Type
+                    </label>
+                    <select
+                      name="cars"
+                      id="cars"
+                      class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 rounded-md bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                    >
+                      <option value="volvo">Volvo</option>
+                      <option value="saab">Saab</option>
+                      <option value="opel">Opel</option>
+                      <option value="audi">Audi</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="w-full lg:w-8/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label
+                      class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                      htmlfor="grid-password"
+                    >
+                      Sub - Category
+                    </label>
+                    <select
+                      name="cars"
+                      id="cars"
+                      class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 rounded-md bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                    >
+                      <option value="volvo">Volvo</option>
+                      <option value="saab">Saab</option>
+                      <option value="opel">Opel</option>
+                      <option value="audi">Audi</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="w-full lg:w-4/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label
+                      class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                      htmlfor="grid-password"
+                    >
+                      First Date of occurence (incident)
+                    </label>
+                    <input
+                      type="date"
+                      class="border-0 px-3 py-3 placeholder-blueGray-300 text-[#6B7280] bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150 rounded-md border-[#e0e0e0] text-base font-medium outline-none focus:border-[#6A64F1] focus:shadow-md"
+                    />
+                  </div>
+                </div>
+                <div class="w-full lg:w-12/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label
+                      class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                      htmlfor="grid-password"
+                    >
+                      Explain in more detail (optional)
+                    </label>
+                    <textarea
+                      type="text"
+                      class="border-0 px-3 py-3 placeholder-blueGray-300 text-[#6B7280] bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150 rounded-md border-[#e0e0e0] text-base font-medium outline-none focus:border-[#6A64F1] focus:shadow-md"
+                      rows="4"
+                    >
+   A beautiful UI Kit and Admin for JavaScript &amp; Tailwind CSS. It is Freeand Open Source.</textarea
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <hr class="mt-6 border-b-1 border-blueGray-300" />
+
+              <h6
+                class="text-blueGray-400 text-sm mt-3 mb-6 font-bold uppercase"
+              >
+                Office Information
+              </h6>
+              <div class="flex flex-wrap">
+                <div class="w-full lg:w-12/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label
+                      class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                      htmlfor="grid-password"
+                    >
+                      Office Location
+                    </label>
+                    <select
+                      name="cars"
+                      id="cars"
+                      class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 rounded-md bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                    >
+                      <option value="volvo">Volvo</option>
+                      <option value="saab">Saab</option>
+                      <option value="opel">Opel</option>
+                      <option value="audi">Audi</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="w-full lg:w-12/12 px-4">
+                  <div class="relative w-full mb-3">
+                    <label
+                      class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                      htmlfor="grid-password"
+                    >
+                      Buiding, Block or Floor or Cabin location (optional)
+                    </label>
+                    <textarea
+                      type="text"
+                      class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded rounded-md text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                      rows="4"
+                    >
+     A beautiful UI Kit and Admin for JavaScript &amp; Tailwind CSS. It is Freeand Open Source.</textarea
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="buttons flex flex-wrap">
+                <div class="w-full lg:w-6/12 px-4">
+                  <button
+                    type="button"
+                    class="btn border rounded text-indigo-500 active:bg-pink-600 font-bold uppercase text-xs border-gray-300 p-1 px-4 font-semibold cursor-pointer text-gray-500 ml-auto"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    type="button"
+                    class="btn border rounded text-white active:bg-pink-600 font-bold uppercase text-xs border-indigo-500 p-1 px-4 font-semibold cursor-pointer text-gray-200 ml-2 bg-indigo-500"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="footer-sec" class="py-1 bg-blueGray-50 col-start-3 col-span-2">
+      <div class="w-full lg:w-8/12 px-4 mx-auto mt-6">
+        <div
+          class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-100 border-0"
+        >
+          <%- include('partials/footer') %>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
